@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="RecorderFile">
+        <crown name="RecorderFile">
+            <desc>user script</desc>
+            <serves>
+                <event name="OnSensorDataUpdate">
+                    <desc>No description yet...</desc>
+                    <param name="sData" type="string" desc="No description yet..."/>
+                </event>
+                <event name="ProvidersChanged">
+                    <desc>No description yet...</desc>
+                    <param name="providers" type="string" desc="No description yet..."/>
+                </event>
+                <function name="startRecording">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="stopRecording">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="startPlayback">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="stopPlayback">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setDataFormat">
+                    <desc>No description yet...</desc>
+                    <param name="format" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getDataFormats">
+                    <desc>No description yet...</desc>
+                    <return name="formats" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getCurrentDataFormat">
+                    <desc>No description yet...</desc>
+                    <return name="format" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getProviderString">
+                    <desc>No description yet...</desc>
+                    <return name="providers" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setCurrentProviders">
+                    <desc>No description yet...</desc>
+                    <param name="providers" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getRecMode">
+                    <desc>No description yet...</desc>
+                    <return name="mode" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setRecMode">
+                    <desc>No description yet...</desc>
+                    <param name="mode" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getModeParam">
+                    <desc>No description yet...</desc>
+                    <return name="param" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setModeParam">
+                    <desc>No description yet...</desc>
+                    <param name="param" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getRecFilePath">
+                    <desc>No description yet...</desc>
+                    <return name="path" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setRecFilePath">
+                    <desc>No description yet...</desc>
+                    <param name="path" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getPlayFilePath">
+                    <desc>No description yet...</desc>
+                    <return name="path" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setPlayFilePath">
+                    <desc>No description yet...</desc>
+                    <param name="path" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getLoop">
+                    <desc>No description yet...</desc>
+                    <return name="loop" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setLoop">
+                    <desc>No description yet...</desc>
+                    <param name="doLoop" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="toggleDataSource">
+                    <desc>No description yet...</desc>
+                    <param name="running" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getDataSourceRunning">
+                    <desc>No description yet...</desc>
+                    <return name="running" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getDataSourceMode">
+                    <desc>No description yet...</desc>
+                    <return name="mode" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getDataSourceModes">
+                    <desc>No description yet...</desc>
+                    <return name="modes" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setDataSourceMode">
+                    <desc>No description yet...</desc>
+                    <param name="mode" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getPlaybackMode">
+                    <desc>No description yet...</desc>
+                    <return name="mode" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getPlaybackModes">
+                    <desc>No description yet...</desc>
+                    <return name="modes" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setPlaybackMode">
+                    <desc>No description yet...</desc>
+                    <param name="mode" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getDataSourceLookupMode">
+                    <desc>No description yet...</desc>
+                    <return name="mode" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getDataSourceLookupModes">
+                    <desc>No description yet...</desc>
+                    <return name="modes" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setDataSourceLookupMode">
+                    <desc>No description yet...</desc>
+                    <param name="mode" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getSpeedupFactor">
+                    <desc>No description yet...</desc>
+                    <return name="factor" type="float" desc="No description yet..."/>
+                </function>
+                <function name="setSpeedupFactor">
+                    <desc>No description yet...</desc>
+                    <param name="factor" type="float" desc="No description yet..."/>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">2.5.0</meta>
+        <meta key="licensed">false</meta>
+        <meta key="priority">low</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="pages" default="recorder.msdd">
+            <file type="application/zip">recorder.msdd</file>
+        </entry>
+        <entry path="resources">
+            <file type="image">sicklogo.bmp</file>
+            <file type="image">sicklogo_neg.bmp</file>
+        </entry>
+        <entry path="scripts" default="recorder.lua">
+            <file type="text/x-lua">json.lua</file>
+            <file type="text/x-lua">recorder.lua</file>
+        </entry>
+    </application>
+</manifest>

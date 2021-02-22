@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="DataSource">
+        <crown name="DataSource">
+            <desc>user script</desc>
+            <serves>
+                <event name="OnNewSensorData">
+                    <desc>No description yet...</desc>
+                    <param name="tsString" type="string" desc="No description yet..."/>
+                    <param name="frameNoString" type="string" desc="No description yet..."/>
+                </event>
+                <function name="start">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="mute">
+                    <desc>No description yet...</desc>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">2.5.0</meta>
+        <meta key="licensed">false</meta>
+        <meta key="priority">low</meta>
+        <meta key="tags">Image,Page</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="resources">
+            <file type="image">sicklogo.bmp</file>
+            <file type="image">sicklogo_neg.bmp</file>
+        </entry>
+        <entry path="scripts" default="ImagePlayer.lua">
+            <file type="text/x-lua">ImagePlayer.lua</file>
+        </entry>
+    </application>
+</manifest>
