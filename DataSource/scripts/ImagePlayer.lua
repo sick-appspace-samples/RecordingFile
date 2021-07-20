@@ -1,19 +1,3 @@
---[[----------------------------------------------------------------------------
-
-  Application Name: ImagePlayer                                                                                                                        
-                                                                                             
-  Description:
-  Viewing images provided from resources in specific user interface. Meta information 
-  is printed to console.
-                                                               
-  Script creates an ImageProvider which reads bitmap images from the 'resources' 
-  folder. This Provider takes images with a period 1000ms, which are provided 
-  asynchronously to the handleNewImage function.  
-  To demo this script the emulator can be used. The image is being displayed in ImageView
-  on the webpage (localhost 127.0.0.1) and the meta data is logged to the console.
-  See also sample 'ImageRecorder'.
-   
-------------------------------------------------------------------------------]]
 
 Script.serveFunction("DataSource.start", "start")
 Script.serveFunction("DataSource.mute", "mute")
@@ -59,7 +43,8 @@ function newImage()
   else
     imgNr = 1
   end
-  viewer1:view(Image.load(images[imgNr]))
+  viewer1:addImage(Image.load(images[imgNr]))
+  viewer1:present()
   Script.notifyEvent("OnNewSensorData", tostring(DateTime.getTimestamp()), tostring(frameNr))
   frameNr = frameNr+1
 end
