@@ -7,7 +7,7 @@ viewer1 = View.create()
 viewer1:setID("Viewer1")
 
 
---Start of Global Scope--------------------------------------------------------- 
+--Start of Global Scope---------------------------------------------------------
 
 playPath = "resources/"
 
@@ -22,21 +22,18 @@ tmr:setExpirationTime(1000)
 tmr:register("OnExpired", "newImage")
 tmr:start()
 
---End of Global Scope----------------------------------------------------------- 
+--End of Global Scope-----------------------------------------------------------
 
---@mute()
 function mute()
   tmr:stop()
 end
 
---@start()
 function start()
   tmr:start()
 end
 
 --Start of Function and Event Scope---------------------------------------------
 
---@newImage()
 function newImage()
   if(imgNr == 1) then
     imgNr = 2
